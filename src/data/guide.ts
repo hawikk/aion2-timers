@@ -159,7 +159,7 @@ export const ACTIVITIES: Activity[] = [
   { name: "Transcendence", format: "4-player timed", limit: "1 / day", reward: "Arcana cards", confidence: "estimate" },
   { name: "Raid", format: "4-player, 2 bosses", limit: "7 / week", reward: "Amp stone & Ariel fragments", confidence: "estimate" },
   { name: "Sanctuary", format: "Boss, CP 2700+", limit: "2 / week", reward: "Heroic gear", confidence: "estimate" },
-  { name: "Spacetime Rift", format: "PvPvE invasion", limit: "Every 3h", reward: "Abyss Points", confidence: "datamined" },
+  { name: "Spacetime Rift", format: "PvPvE invasion", limit: "Every 3h", reward: "Abyss Points", confidence: "estimate" },
   { name: "Abyss (Reshanta)", format: "RvR zone", limit: "Timed access", reward: "Abyss Points, boss loot", confidence: "estimate" },
 ];
 

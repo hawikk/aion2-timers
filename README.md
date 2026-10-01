@@ -18,7 +18,14 @@ Production build: `npm run build` writes a fully static site to `out/` (`output:
 
 ## Deploying (GitHub Pages)
 
-The public copy at [hawikk/aion2-timers](https://github.com/hawikk/aion2-timers) is live at **https://hawikk.github.io/aion2-timers/**. On every push to `main`, `.github/workflows/deploy-pages.yml` builds with `PAGES_BASE_PATH=/<repo-name>` (so assets and links resolve under the project sub-path) and publishes `out/` to the `gh-pages` branch. Pages serves that branch. To deploy anywhere else, run `npm run build` and upload `out/`; leave `PAGES_BASE_PATH` unset when serving from a domain root.
+The public copy at [hawikk/aion2-timers](https://github.com/hawikk/aion2-timers) is served at **https://hawikk.github.io/aion2-timers/**. On every push to `main`, `.github/workflows/deploy-pages.yml` builds with `PAGES_BASE_PATH` set to the Pages sub-path (so assets and links resolve under `/aion2-timers/`) and deploys `out/` with GitHub's official Pages actions.
+
+One-time setup in the GitHub repo:
+
+1. **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+2. Make sure the workflow lives at `.github/workflows/deploy-pages.yml`. If it was uploaded as `ci/deploy-pages.yml` (API tokens without the `workflow` scope can't write to `.github/workflows/`), open that file on GitHub, click edit, change its path to `.github/workflows/deploy-pages.yml`, and commit. The commit triggers the first deploy.
+
+To deploy anywhere else, run `npm run build` and upload `out/`. Leave `PAGES_BASE_PATH` unset when serving from a domain root.
 
 ## Correcting the schedule
 
