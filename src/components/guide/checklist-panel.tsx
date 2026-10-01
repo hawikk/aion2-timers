@@ -127,7 +127,7 @@ export function ChecklistPanel() {
         items={DAILY_CHECKLIST}
         now={now}
         timeZone={clock.timeZone}
-        footnote="Daily reset hour is an estimate for EU — compare with the Duty Quest timer in game."
+        footnote="Daily reset checked in game on 1 Oct 2026: 16:00 server time, 07:00 UTC."
       />
       <ChecklistCard
         kind="weekly"

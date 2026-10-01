@@ -1,9 +1,9 @@
 /**
  * AION 2 (Global / EU) timed content — the single source of truth for the dashboard.
  *
- * All times are SERVER time ("HH:MM", 24h). The server clock itself is selectable in the
- * app because sources disagree (UTC+9 vs UTC); edit SERVER_CLOCKS / DEFAULT_SERVER_CLOCK_ID
- * once it is confirmed. To correct a spawn, edit the `recurrence` of the event below.
+ * All times are SERVER time ("HH:MM", 24h). The default clock is UTC+9, checked against
+ * the in-game Duty reset on 1 Oct 2026. SERVER_CLOCKS still includes UTC and Europe/Berlin
+ * if a later patch moves the reset. To correct a spawn, edit the `recurrence` of the event.
  */
 import type { SourceId } from "./sources";
 
@@ -49,7 +49,7 @@ export const SERVER_CLOCKS: ServerClock[] = [
     label: "UTC+9 (Global client clock)",
     timeZone: "Etc/GMT-9",
     description:
-      "AION2 Hub reports every Global region shares a GMT+9 clock. Fits the Season 1 start and a midnight-Pacific weekly reset.",
+      "Checked on an EU client on 1 Oct 2026. The Duty reset countdown landed on 07:00 UTC, which is 16:00 on this clock.",
   },
   {
     id: "utc",
@@ -92,9 +92,9 @@ export const EVENTS: ScheduledEvent[] = [
     durationMinutes: 0,
     description:
       "Duty Quests (5/day), urgent Supply Requests and daily entries refresh. Your daily checklist clears at this moment.",
-    confidence: "estimate",
+    confidence: "confirmed",
     timingNote:
-      "Global daily reset hour isn't published. Assumed to match the weekly reset hour; KR/TW reset at 05:00. Compare with the Duty Quest timer (J) in game.",
+      "Checked in game on 1 Oct 2026. With about 12h 7m left on the Duty timer around 18:52 UTC, the reset lands on 07:00 UTC, which is 16:00 on the UTC+9 server clock.",
     sources: ["wikilySeason", "vortexDaily", "u4nDuty"],
   },
   {
@@ -106,7 +106,8 @@ export const EVENTS: ScheduledEvent[] = [
     description:
       "Daily Dungeon, Ascension Trial, raid entries, Orders, weekly shop limits and crafts reset. The open Ascension Trial swaps.",
     confidence: "datamined",
-    timingNote: "Wednesday is widely reported; the 16:00 server hour comes from the Season 1 data.",
+    timingNote:
+      "Wednesday 16:00 comes from the Season 1 data. That hour is the same server clock the Duty reset matched on 1 Oct 2026.",
     sources: ["wikilySeason", "skycoachChecklist"],
   },
   {
@@ -159,7 +160,7 @@ export const EVENTS: ScheduledEvent[] = [
     description:
       "Three level 65 executor bosses spawn together, right after the siege. Expect heavy PvP around them; bring your legion.",
     confidence: "datamined",
-    timingNote: "Both datamines agree on Mon/Thu/Sat 21:30 server. Server clock unconfirmed.",
+    timingNote: "Both datamines agree on Mon/Thu/Sat 21:30 server. The UTC+9 clock was checked against the Duty reset on 1 Oct 2026.",
     sources: ["aion2hub", "gamers4life"],
   },
   {
@@ -185,7 +186,7 @@ export const EVENTS: ScheduledEvent[] = [
     description:
       "The Sunday/Friday Abyss siege boss. Level 65; one of the 7 scheduled field bosses in the Global client.",
     confidence: "datamined",
-    timingNote: "Both datamines agree on Sun/Fri 21:00 server. Server clock unconfirmed.",
+    timingNote: "Both datamines agree on Sun/Fri 21:00 server. The UTC+9 clock was checked against the Duty reset on 1 Oct 2026.",
     sources: ["aion2hub", "gamers4life", "wikilyBosses"],
   },
   {

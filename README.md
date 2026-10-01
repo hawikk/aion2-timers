@@ -33,7 +33,7 @@ All timed content lives in **`src/data/schedule.ts`**:
 
 - `EVENTS`: each event has a `recurrence` in **server time**, either `{ type: "interval", everyMinutes, firstAt }` or `{ type: "weekly", days, at }`. It also has a `durationMinutes` window for the "Happening now" state, a `confidence` level, and a `timingNote`.
 - `RESETS`: daily and weekly reset times.
-- `SERVER_CLOCKS` / `DEFAULT_SERVER_CLOCK_ID`: the time zone the server clock runs on. Sources disagree (UTC+9 vs UTC), so the app lets you switch clocks in the header. To check which one is right, compare the in-game Duty Quest reset timer (`J` → Duty) with the app's *Daily reset* card.
+- `SERVER_CLOCKS` / `DEFAULT_SERVER_CLOCK_ID`: the time zone the server clock runs on. The default is UTC+9, checked on an EU client on 1 Oct 2026 (Duty reset countdown landed on 07:00 UTC, which is 16:00 on that clock). UTC and Europe/Berlin stay available if a later patch moves the reset.
 
 Guide copy and checklist items are in `src/data/guide.ts`, and source links are in `src/data/sources.ts`.
 

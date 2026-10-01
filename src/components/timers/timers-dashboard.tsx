@@ -117,7 +117,7 @@ export function TimersDashboard() {
           icon={RotateCcw}
           label="Daily reset"
           value={formatCountdown(daily.next - now)}
-          sub={`${formatDayTime(daily.next)} local · estimate`}
+          sub={`${formatDayTime(daily.next)} local`}
         />
         <StatTile
           icon={CalendarClock}
