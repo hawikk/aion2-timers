@@ -105,9 +105,9 @@ export const EVENTS: ScheduledEvent[] = [
     durationMinutes: 0,
     description:
       "Daily Dungeon, Ascension Trial, raid entries, Orders, weekly shop limits and crafts reset. The open Ascension Trial swaps.",
-    confidence: "datamined",
+    confidence: "confirmed",
     timingNote:
-      "Wednesday 16:00 comes from the Season 1 data. That hour is the same server clock the Duty reset matched on 1 Oct 2026.",
+      "Checked in game on 1 Oct 2026. The Daily Dungeon tooltip's weekly recharge had 5d 11h 49m left around 19:10 UTC, which lands on Wednesday 07:00 UTC (16:00 on the UTC+9 clock).",
     sources: ["wikilySeason", "skycoachChecklist"],
   },
   {
