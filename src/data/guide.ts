@@ -93,6 +93,52 @@ export const WEEKLY_CHECKLIST: ChecklistItem[] = [
   },
 ];
 
+export interface GearScoreTarget {
+  score: string;
+  title: string;
+  confidence: Confidence;
+  body: string;
+}
+
+/** What 1,400 and 1,600 mean on the Global launch, and the order that gets there. */
+export const GS_TARGETS: GearScoreTarget[] = [
+  {
+    score: "1,400",
+    title: "The dungeon gate",
+    confidence: "datamined",
+    body: "In the September Global test client, 1,400 is the Conquest item level for Urugugu Canyon and Vakron Sky Island. Krao Cave and Draupnir are listed at 700 there. KR writeups often say 1,000 before those two will take you. Check the dungeon menu — retail can differ from the test build.",
+  },
+  {
+    score: "1,600",
+    title: "The number groups ask for",
+    confidence: "estimate",
+    body: "Party finder on KR/TW asks about 1,600 even for Draupnir and Krao, which you can enter lower. MeinMMO treats 1,600 as the point to start Abyss accessories. A white Arcana card is about 20 item level and a green one about 40, so cards close this gap faster than another armor piece.",
+  },
+];
+
+export const GS_STEPS: { title: string; body: string }[] = [
+  {
+    title: "Clear your own map before you queue",
+    body: "Sealed Dungeons (Daevanion points — take the orange offensive nodes), Strongholds (Noble Belt scrolls), every Monolith feather (amulet scrolls), and the blue regional quests. Players who only follow the red story stall under 1,100.",
+  },
+  {
+    title: "Cross a rift and do the other faction's map",
+    body: "The same sealed dungeons, strongholds, and feathers exist on the enemy side, and rifts are how you get there. A 1,500 player on the forum was told that both maps plus Abyss feathers is the jump toward 1,900. Bring a kisk; you will get ganked.",
+  },
+  {
+    title: "Enhance the pieces you will not replace",
+    body: "Story weapon to +10 (that range is the safe one). Belt and Revelation Amulet keep going, because they morph upward instead of being swapped. If you are a few points short of 1,600, the two arm rings are the upgrade MeinMMO says you will not replace for a while. Greens and blues can be enhanced and extracted later for the stones back.",
+  },
+  {
+    title: "Spend weekly entries after the map, before Wednesday",
+    body: "Daily Dungeon score, Ascension Trial, and conquest reward cubes pay off your current strength. The weekly reset is Wednesday 07:00 UTC. Do Duty Quests every day — those reset daily — and hold the weekly runs until the map clear is done.",
+  },
+  {
+    title: "Then farm the dungeon that matches the hole",
+    body: "Draupnir for Bakarma armor (PvE stats, on par with early Abyss gear, about 300k Kinah a clear). Vakron Sky Island for the gold weapon once the menu lets you in. Transcendence for Arcana as soon as a stage is clearable; S-rank opens the next stage. Skip Krao if you only need a weapon — its weapon drop rate is poor.",
+  },
+];
+
 export const FIRST_STEPS: { title: string; body: string }[] = [
   {
     title: "Finish the level 45 story beat",
@@ -108,7 +154,7 @@ export const FIRST_STEPS: { title: string; body: string }[] = [
   },
   {
     title: "Weapon to +10 first",
-    body: "Pour early enhancement stones into your weapon, then the rest of your gear to +5–10. Rushing campaign + side quests and +5 gear lands around item level 1100–1300.",
+    body: "Story weapon to +10. That range is widely reported as safe. Past +10, failures eat stones. A rushed story with +5 filler gear lands around 1,100–1,300, short of the 1,400 dungeons.",
   },
   {
     title: "Start the daily loop",
@@ -118,8 +164,8 @@ export const FIRST_STEPS: { title: string; body: string }[] = [
 
 export const GEAR_PATH: { stage: string; source: string; note: string }[] = [
   { stage: "Story belt & amulet", source: "Main story at 45", note: "Enhance with stronghold / feather scrolls, then substance-morph upward after +10." },
-  { stage: "Bakarma armor", source: "Expedition (Conquest) — Draupnir", note: "On par with early Abyss gear for PvE; no PvP stats." },
-  { stage: "Arcana cards", source: "Transcendence", note: "Large gear score boost; levels skills too." },
+  { stage: "Bakarma armor", source: "Draupnir", note: "First real PvE set. No PvP stats. Test client lists the dungeon at 700; groups often want more." },
+  { stage: "Arcana cards", source: "Transcendence", note: "About 20 item level for a white card, 40 for green. Five green cards are the fast route through 1,600." },
   { stage: "Abyss gear", source: "Abyss Points shop", note: "PvP stats. Points come from Duty Quests, Orders, Supply Requests and Reshanta." },
   { stage: "Heroic gear", source: "Sanctuary (CP 2700+)", note: "2 entries per week on KR/TW." },
 ];
@@ -173,4 +219,7 @@ export const GUIDE_SOURCES: SourceId[] = [
   "skycoachChecklist",
   "mmomLaunch",
   "wikilySeason",
+  "meinmmoGear",
+  "aion2hubLeveling",
+  "vortexItemLevel",
 ];

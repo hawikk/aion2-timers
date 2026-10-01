@@ -11,6 +11,8 @@ import {
   ENHANCE_RULES,
   FIRST_STEPS,
   GEAR_PATH,
+  GS_STEPS,
+  GS_TARGETS,
   GUIDE_SOURCES,
 } from "@/data/guide";
 
@@ -35,11 +37,41 @@ export default function GuidePage() {
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold/80">Endgame · Global cap</p>
         <h1 className="mt-2 font-display text-3xl font-bold sm:text-4xl">You hit level 45. Now what?</h1>
         <p className="mt-3 max-w-2xl text-sm text-muted-foreground sm:text-base">
-          At 45 your level stops mattering and <strong className="text-foreground">item level / combat power</strong>{" "}
-          gates everything. Your week is a loop of daily Duty Quests and dungeons, weekly-capped instances, and Abyss
-          fights for Abyss Points. Tick things off below — the lists clear themselves at reset.
+          At 45 your level stops mattering and <strong className="text-foreground">item level</strong> gates the
+          dungeons. 1,400 is the next real gate on the Global test client. 1,600 is what groups ask for. The weekly
+          reset is Wednesday 07:00 UTC, so raise the score before you spend the weekly entries.
         </p>
       </header>
+
+      <section className="flex flex-col gap-4">
+        <SectionTitle icon={TrendingUp}>Get to 1,400, then 1,600</SectionTitle>
+        <p className="-mt-2 max-w-3xl text-sm text-muted-foreground">
+          Forums, MeinMMO, and the Global launch videos agree on the order: your map, the enemy map through a rift,
+          then the dungeon that fills the empty slot. They disagree on the exact number on the door. KR Season 3 sets
+          (level 84 Fire Temple, Naukum) are not the Global Season 1 path.
+        </p>
+        <div className="grid gap-3 lg:grid-cols-2">
+          {GS_TARGETS.map((target) => (
+            <div key={target.score} className="rounded-xl border border-gold/25 bg-card/70 p-4">
+              <div className="flex items-center justify-between gap-3">
+                <p className="font-display text-2xl font-bold text-gold">{target.score}</p>
+                <ConfidenceBadge confidence={target.confidence} />
+              </div>
+              <h3 className="mt-1 font-semibold">{target.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{target.body}</p>
+            </div>
+          ))}
+        </div>
+        <ol className="grid gap-3 md:grid-cols-2">
+          {GS_STEPS.map((step, i) => (
+            <li key={step.title} className="rounded-xl border border-border/70 bg-card/60 p-4">
+              <span className="font-display text-2xl font-bold text-gold/70">{String(i + 1).padStart(2, "0")}</span>
+              <h3 className="mt-1 font-semibold">{step.title}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{step.body}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
 
       <section className="flex flex-col gap-4">
         <SectionTitle icon={ListChecks}>Daily &amp; weekly checklist</SectionTitle>
