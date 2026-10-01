@@ -84,13 +84,13 @@ export const SOURCES = {
     title: "Aion 2 Week 1 Guide: Daily Routine, Weekly Checklist and Reset Strategy",
     publisher: "MMOExp",
     url: "https://www.mmoexp.com/News/aion-2-october-5-week-1-guide-best-daily-routine-weekly-checklist-and-reset-strategy.html",
-    usedFor: "Week-one plan, Ascension Trial 3/week, Daily Dungeon timing.",
+    usedFor: "Week-one plan, Ascension Trial 3/week, Daily Dungeon 14 entries per week.",
   },
   skycoachChecklist: {
     title: "AION 2 Daily and Weekly Checklist Guide",
     publisher: "Skycoach",
     url: "https://skycoach.gg/blog/aion-2/articles/checklist-guide",
-    usedFor: "What resets weekly vs. what regenerates (Odyle Energy, keys, tickets).",
+    usedFor: "14 Daily Dungeon entries per week, and subscriber Wind Breeze shop stock (extra tickets).",
   },
   mmomLaunch: {
     title: "AION 2 Global Launch Guide",

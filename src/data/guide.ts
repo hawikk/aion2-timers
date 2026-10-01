@@ -41,15 +41,15 @@ export const DAILY_CHECKLIST: ChecklistItem[] = [
   {
     id: "shugo-keys",
     label: "Use Shugo Festival keys",
-    detail: "Hourly mini-games at :00. Keys regenerate; the Shugo shop sells Wisdom Stones.",
+    detail: "Hourly mini-games at :00. Keys regenerate. Quai membership raises the reward-key cap to 21.",
   },
 ];
 
 export const WEEKLY_CHECKLIST: ChecklistItem[] = [
   {
     id: "daily-dungeon",
-    label: "Daily Dungeon ×7",
-    detail: "Despite the name it's 7 runs per week. Kill the mini boss for a higher score — more enhancement stones.",
+    label: "Daily Dungeon ×14",
+    detail: "14 basic entries refill at the weekly reset. A separate Recharge Count (0/30 here) is extra entries. Quai membership does not raise the 14.",
   },
   {
     id: "ascension-trial",
@@ -64,7 +64,7 @@ export const WEEKLY_CHECKLIST: ChecklistItem[] = [
   {
     id: "weekly-shop",
     label: "Weekly shop purchases",
-    detail: "Odyle Energy, Resurrection Spirit Stones, Bioresearch Base tickets.",
+    detail: "Quai membership unlocks the Wind Breeze Merchant. Guides say that shop sells extra Daily Dungeon tickets on top of the 14.",
   },
   {
     id: "substance-morph",
@@ -137,9 +137,9 @@ export const CURRENCIES: { name: string; use: string; from: string }[] = [
   { name: "Enhancement stones", use: "+1 to +15/+20 on gear", from: "Daily Dungeon, Duty Quests, Sealed Dungeons" },
   { name: "Amplification stones", use: "Amp levels after max enhance", from: "Raid fragments" },
   { name: "Dream Fragments", use: "Nightmare shop: breakthrough scrolls, crystals, Wisdom Stones", from: "Nightmare" },
-  { name: "Odyle Energy", use: "Opens Expedition / Transcendence chests", from: "Regenerates over time, weekly shop, crafting" },
+  { name: "Odyle Energy", use: "Opens Expedition / Transcendence chests. Membership storage cap is 840, and it lets you open a second cube.", from: "Regenerates over time, weekly shop, crafting" },
   { name: "Ariel fragments", use: "Ariel (PvE) Daevanion board", from: "Ascension Trial, raid" },
-  { name: "Shugo Festival keys", use: "Hourly Shugo mini-games", from: "Regenerate over time" },
+  { name: "Shugo Festival keys", use: "Hourly Shugo mini-games", from: "Regenerate over time. Membership raises the reward-key cap to 21." },
 ];
 
 export interface Activity {
@@ -152,7 +152,7 @@ export interface Activity {
 
 export const ACTIVITIES: Activity[] = [
   { name: "Duty Quests", format: "Daily quests", limit: "5 / day", reward: "Abyss Points, Kinah, stones, crystals", confidence: "confirmed" },
-  { name: "Daily Dungeon", format: "Solo waves", limit: "7 / week", reward: "Enhancement stones", confidence: "datamined" },
+  { name: "Daily Dungeon", format: "Solo waves", limit: "14 / week", reward: "Enhancement stones", confidence: "confirmed" },
   { name: "Ascension Trial", format: "Timed solo", limit: "3 / week", reward: "Ariel fragments, Kinah", confidence: "datamined" },
   { name: "Nightmare", format: "Solo boss", limit: "2 / day (tickets)", reward: "Dream Fragments", confidence: "estimate" },
   { name: "Expedition / Conquest", format: "4-player", limit: "2 / day", reward: "Gear, Kinah", confidence: "estimate" },
