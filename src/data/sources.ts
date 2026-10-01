@@ -92,6 +92,24 @@ export const SOURCES = {
     url: "https://skycoach.gg/blog/aion-2/articles/checklist-guide",
     usedFor: "14 Daily Dungeon entries per week, and subscriber Wind Breeze shop stock (extra tickets).",
   },
+  meinmmoGear: {
+    title: "Aion 2 Equipment Guide: How to Quickly Obtain the Best Gear in PvE",
+    publisher: "MeinMMO",
+    url: "https://mein-mmo.de/en/aion-2-equipment-guide-how-to-quickly-obtain-the-best-gear-in-pve,1586095/",
+    usedFor: "EU item-level phases: 1,000, 1,300, 1,600, and arm rings as the stopgap before 1,600.",
+  },
+  aion2hubLeveling: {
+    title: "Asmodian 40–45 and Krao Cave",
+    publisher: "AION2 Hub",
+    url: "https://aion2hub.com/leveling/asmodian-levels-40-45-krao",
+    usedFor: "Global dungeon item levels: Krao and Draupnir 700, Urugugu 1,400, Fire Temple 2,100.",
+  },
+  vortexItemLevel: {
+    title: "How to Increase Item Level and Essential Content",
+    publisher: "Vortex Gaming",
+    url: "https://vortexgaming.io/en/postdetail/605874",
+    usedFor: "Video notes: Draupnir for armor, skip Krao for weapons, Transcendence for green Arcana.",
+  },
   mmomLaunch: {
     title: "AION 2 Global Launch Guide",
     publisher: "MMOM",
