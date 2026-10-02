@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Coins, Gem, ListChecks, Swords, TrendingUp } from "lucide-react";
+import { Coins, Crosshair, Gem, ListChecks, Swords, TrendingUp } from "lucide-react";
 import { ClockNotice } from "@/components/clock-notice";
 import { ConfidenceBadge } from "@/components/confidence-badge";
 import { ChecklistPanel } from "@/components/guide/checklist-panel";
@@ -14,6 +14,11 @@ import {
   GS_STEPS,
   GS_TARGETS,
   GUIDE_SOURCES,
+  RANGER_METER,
+  RANGER_NOTES,
+  RANGER_SKILLS,
+  RANGER_STIGMAS,
+  RANGER_WINDOW,
 } from "@/data/guide";
 
 export const metadata: Metadata = {
@@ -71,6 +76,47 @@ export default function GuidePage() {
             </li>
           ))}
         </ol>
+      </section>
+
+      <section className="flex flex-col gap-4">
+        <SectionTitle icon={Crosshair}>Ranger PvE damage</SectionTitle>
+        <p className="-mt-2 max-w-3xl text-sm text-muted-foreground">
+          Global Advance Access has no public Ranger damage parses yet. The window below is the boss setup from
+          playtest client 1.0.21.0. The percentages are what those same skills did on KR/TW meters.
+        </p>
+        <div className="grid gap-3 lg:grid-cols-2">
+          {[RANGER_WINDOW, RANGER_METER].map((card) => (
+            <div key={card.name} className="rounded-xl border border-gold/25 bg-card/70 p-4">
+              <div className="flex items-center justify-between gap-3">
+                <h3 className="font-semibold">{card.name}</h3>
+                {card.confidence ? <ConfidenceBadge confidence={card.confidence} /> : null}
+              </div>
+              <p className="mt-2 text-sm text-muted-foreground">{card.detail}</p>
+            </div>
+          ))}
+        </div>
+        <ol className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+          {RANGER_SKILLS.map((skill, i) => (
+            <li key={skill.name} className="rounded-xl border border-border/70 bg-card/60 p-4">
+              <span className="font-display text-2xl font-bold text-gold/70">{String(i + 1).padStart(2, "0")}</span>
+              <h3 className="mt-1 font-semibold">{skill.name}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{skill.detail}</p>
+            </li>
+          ))}
+        </ol>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {RANGER_STIGMAS.map((stigma) => (
+            <div key={stigma.name} className="rounded-xl border border-border/70 bg-card/60 p-4">
+              <p className="font-semibold">{stigma.name}</p>
+              <p className="mt-1 text-sm text-muted-foreground">{stigma.detail}</p>
+            </div>
+          ))}
+        </div>
+        <ul className="flex list-disc flex-col gap-2 pl-4 text-sm text-muted-foreground marker:text-gold">
+          {RANGER_NOTES.map((note) => (
+            <li key={note}>{note}</li>
+          ))}
+        </ul>
       </section>
 
       <section className="flex flex-col gap-4">
@@ -132,7 +178,7 @@ export default function GuidePage() {
       <section className="flex flex-col gap-4">
         <SectionTitle icon={Swords}>Content at 45</SectionTitle>
         <p className="-mt-2 text-sm text-muted-foreground">
-          Entry limits mostly come from KR/TW guides; Global may differ, so check the in-game counter.
+          The Conquest row is Wikily’s Draupnir cube cap. Other limits mostly come from KR/TW guides. Check the in-game counter.
         </p>
         <div className="overflow-x-auto rounded-xl border border-border/70 bg-card/60">
           <table className="w-full min-w-[640px] text-sm">
