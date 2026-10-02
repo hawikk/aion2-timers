@@ -11,17 +11,17 @@ export const DAILY_CHECKLIST: ChecklistItem[] = [
   {
     id: "duty-quests",
     label: "5 Duty Quests",
-    detail: "J \u2192 Duty. Refresh with Kinah for crystal rewards in slot 1. 500 Abyss Points each.",
+    detail: "J → Duty. Refresh with Kinah for crystal rewards in slot 1. 500 Abyss Points each.",
   },
   {
     id: "supply-urgent",
     label: "Urgent Supply Requests",
-    detail: "Alt+O \u2192 Supply Request. Turn in spare drops for Abyss Points if the Kinah cost is fair.",
+    detail: "Alt+O → Supply Request. Turn in spare drops for Abyss Points if the Kinah cost is fair.",
   },
   {
     id: "nightmare",
     label: "Nightmare runs",
-    detail: "Solo boss fights for Dream Fragments. Tickets regenerate \u2014 don't sit at cap.",
+    detail: "Solo boss fights for Dream Fragments. Tickets regenerate — don't sit at cap.",
   },
   {
     id: "conquest",
@@ -31,7 +31,7 @@ export const DAILY_CHECKLIST: ChecklistItem[] = [
   {
     id: "transcendence",
     label: "Transcendence",
-    detail: "Timed 4-player grand dungeon for Arcana cards \u2014 a big gear score jump.",
+    detail: "Timed 4-player grand dungeon for Arcana cards — a big gear score jump.",
   },
   {
     id: "odyle",
@@ -48,12 +48,12 @@ export const DAILY_CHECKLIST: ChecklistItem[] = [
 export const WEEKLY_CHECKLIST: ChecklistItem[] = [
   {
     id: "daily-dungeon",
-    label: "Daily Dungeon \u00d714",
+    label: "Daily Dungeon ×14",
     detail: "14 basic entries refill at the weekly reset. A separate Recharge Count (0/30 here) is extra entries. Quai membership does not raise the 14.",
   },
   {
     id: "ascension-trial",
-    label: "Ascension Trial \u00d73",
+    label: "Ascension Trial ×3",
     detail: "Timed solo dungeon; this week's trial is shown above. Run it late in the week when you're strongest.",
   },
   {
@@ -79,7 +79,7 @@ export const WEEKLY_CHECKLIST: ChecklistItem[] = [
   {
     id: "abyss-bosses",
     label: "Reshanta bosses & Artifact Siege",
-    detail: "Executors (Mon/Thu/Sat) and Guardian Lord Nahma (Sun/Fri) \u2014 see the Timers page.",
+    detail: "Executors (Mon/Thu/Sat) and Guardian Lord Nahma (Sun/Fri) — see the Timers page.",
   },
   {
     id: "battlefield",
@@ -106,7 +106,7 @@ export const GS_TARGETS: GearScoreTarget[] = [
     score: "1,400",
     title: "The dungeon gate",
     confidence: "datamined",
-    body: "In the September Global test client, 1,400 is the Conquest item level for Urugugu Canyon and Vakron Sky Island. Krao Cave and Draupnir are listed at 700 there. KR writeups often say 1,000 before those two will take you. Check the dungeon menu \u2014 retail can differ from the test build.",
+    body: "In the September Global test client, 1,400 is the Conquest item level for Urugugu Canyon and Vakron Sky Island. Krao Cave and Draupnir are listed at 700 there. KR writeups often say 1,000 before those two will take you. Check the dungeon menu — retail can differ from the test build.",
   },
   {
     score: "1,600",
@@ -119,7 +119,7 @@ export const GS_TARGETS: GearScoreTarget[] = [
 export const GS_STEPS: { title: string; body: string }[] = [
   {
     title: "Clear your own map before you queue",
-    body: "Sealed Dungeons (Daevanion points \u2014 take the orange offensive nodes), Strongholds (Noble Belt scrolls), every Monolith feather (amulet scrolls), and the blue regional quests. Players who only follow the red story stall under 1,100.",
+    body: "Sealed Dungeons (Daevanion points — take the orange offensive nodes), Strongholds (Noble Belt scrolls), every Monolith feather (amulet scrolls), and the blue regional quests. Players who only follow the red story stall under 1,100.",
   },
   {
     title: "Cross a rift and do the other faction's map",
@@ -131,22 +131,22 @@ export const GS_STEPS: { title: string; body: string }[] = [
   },
   {
     title: "Spend weekly entries after the map, before Wednesday",
-    body: "Daily Dungeon score and Ascension Trial pay off your current strength. Conquest loot is the Odyle cube you open before you leave. The weekly reset is Wednesday 07:00 UTC. Do Duty Quests every day \u2014 those reset daily \u2014 and hold the weekly runs until the map clear is done.",
+    body: "Daily Dungeon score and Ascension Trial pay off your current strength. Conquest loot is the Odyle cube you open before you leave. The weekly reset is Wednesday 07:00 UTC. Do Duty Quests every day — those reset daily — and hold the weekly runs until the map clear is done.",
   },
   {
     title: "Then farm the dungeon that matches the hole",
-    body: "Draupnir for Bakarma armor. Open the Odyle Energy Cube before you leave. Wikily (1 Oct 2026) lists 40 energy for both Draupnir modes, and both modes are item level 700. The Conquest cube lists 70,000 Kinah. A chosen Bakarma piece is the pity pick after 3 Exploration cubes or 14 Conquest cubes, so one clear is not a guaranteed chest. Vakron Sky Island for the gold weapon once the menu lets you in. Transcendence uses the same kind of cube for Arcana. Skip Krao if you only need a weapon \u2014 its weapon rate on the cube sheet is poor.",
+    body: "Draupnir for Bakarma armor. Open the Odyle Energy Cube before you leave. Wikily (1 Oct 2026) lists 40 energy for both Draupnir modes, and both modes are item level 700. The Conquest cube lists 70,000 Kinah. A chosen Bakarma piece is the pity pick after 3 Exploration cubes or 14 Conquest cubes, so one clear is not a guaranteed chest. Vakron Sky Island for the gold weapon once the menu lets you in. Transcendence uses the same kind of cube for Arcana. Skip Krao if you only need a weapon — its weapon rate on the cube sheet is poor.",
   },
 ];
 
 export const FIRST_STEPS: { title: string; body: string }[] = [
   {
     title: "Finish the level 45 story beat",
-    body: "The main story hands you a belt and an amulet at 45 \u2014 equip them right away. Belts use Noble Belt Enhance Scrolls from strongholds; amulets use Fierce Battle Amulet scrolls from feather turn-ins.",
+    body: "The main story hands you a belt and an amulet at 45 — equip them right away. Belts use Noble Belt Enhance Scrolls from strongholds; amulets use Fierce Battle Amulet scrolls from feather turn-ins.",
   },
   {
     title: "Clear every Sealed Dungeon",
-    body: "One-time clears in Verteron/Altgard give Daevanion points and enhancement stones, plus the gold title \u201cThrough hell and back\u201d.",
+    body: "One-time clears in Verteron/Altgard give Daevanion points and enhancement stones, plus the gold title “Through hell and back”.",
   },
   {
     title: "Collect Empyrean Trace feathers",
@@ -154,7 +154,7 @@ export const FIRST_STEPS: { title: string; body: string }[] = [
   },
   {
     title: "Weapon to +10 first",
-    body: "Story weapon to +10. That range is widely reported as safe. Past +10, failures eat stones. A rushed story with +5 filler gear lands around 1,100\u20131,300, short of the 1,400 dungeons.",
+    body: "Story weapon to +10. That range is widely reported as safe. Past +10, failures eat stones. A rushed story with +5 filler gear lands around 1,100–1,300, short of the 1,400 dungeons.",
   },
   {
     title: "Start the daily loop",
@@ -172,7 +172,7 @@ export const GEAR_PATH: { stage: string; source: string; note: string }[] = [
 
 export const ENHANCE_RULES: string[] = [
   "Yellow (Unique) gear caps at +15, then 5 amplification levels.",
-  "Orange (Heroic) gear caps at +20, then 5 amplification levels \u2014 amp unlocks the orange stats.",
+  "Orange (Heroic) gear caps at +20, then 5 amplification levels — amp unlocks the orange stats.",
   "Success rate soft-resets to 60% going from +15 to +16.",
   "Moving +15 yellow into orange lands at +20 amp 0: enhancement transfers, amp, manastones, theostones and potential don't.",
 ];
