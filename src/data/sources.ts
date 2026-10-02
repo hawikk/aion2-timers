@@ -110,25 +110,19 @@ export const SOURCES = {
     url: "https://vortexgaming.io/en/postdetail/605874",
     usedFor: "Video notes: Draupnir for armor, skip Krao for weapons, Transcendence for green Arcana.",
   },
-  expcarryRanger: {
-    title: "AION 2 Ranger Guide",
-    publisher: "ExpCarry",
-    url: "https://expcarry.com/aion-2-ranger-guide",
+  welpsRanger: {
+    title: "Ranger PvE guide",
+    publisher: "Welps",
+    url: "https://youtu.be/wKOm6yKuu_I",
     usedFor:
-      "Ranger boss setup from Global Playtest client 1.0.21.0 (29 Sep 2026): Gale Arrow, Marking Shot, Deadshot, Drill Dart, Tempest Shot, Snipe.",
+      "Chaos-server Ranger at about 1,000,000 CP. PvE rotation, stigma order, skill levels, Daevanion, soul binds, Arcana, and pet rolls. He flags the Global accuracy cap, the fifth stigma slot, and the Daevanion layout as unchecked.",
   },
-  aionflexRanger: {
-    title: "Ranger DPS by Combat Power",
-    publisher: "AionFlex",
-    url: "https://aionflex.gg/meta/classes/ranger",
+  wikilyRanger: {
+    title: "Ranger",
+    publisher: "Wikily (AION 2 wiki)",
+    url: "https://wikily.gg/aion-2/classes/ranger",
     usedFor:
-      "KR/TW Ranger damage shares as of 1 Oct 2026 (11,358 parses). Global has no parses on this meter yet.",
-  },
-  aion2hubRanger: {
-    title: "AION 2 Ranger Builds",
-    publisher: "AION2 Hub",
-    url: "https://aion2hub.com/builds/ranger",
-    usedFor: "No public Global Ranger build yet. The listed PvE sheet is KR/TW client v110.",
+      "Names the specialty effects Welps counted by slot. Vaizel's Authority level 20 is the crit cooldown cut he treats as the power spike.",
   },
   wikilyDraupnir: {
     title: "Draupnir",
